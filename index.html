@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Happy Teachers' Day | Reward Bartolay</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Background decorations -->
+    <div class="circle circle1"></div>
+    <div class="circle circle2"></div>
+
+    <header>
+        <div class="logo">✦ GRATITUDE</div>
+        <div class="small-text">TEACHERS' DAY 2026</div>
+    </header>
+
+    <main>
+
+        <p class="subtitle">A SPECIAL MESSAGE OF APPRECIATION</p>
+
+        <h1>
+            Happy Teachers'
+            <span>Day!</span>
+        </h1>
+
+        <p class="intro">
+            For the teachers who inspire, guide, encourage,
+            and help us become better every day.
+        </p>
+
+        <!-- Message Card -->
+        <section class="card">
+
+            <div class="card-title">
+                <span>✦</span>
+                A MESSAGE FOR YOU
+                <span>✦</span>
+            </div>
+
+            <!-- Envelope -->
+            <div class="envelope-area">
+
+                <div class="envelope" id="envelope">
+
+                    <div class="letter" id="letter">
+
+                        <div class="flower">✿</div>
+
+                        <p class="letter-small">
+                            WITH SINCERE GRATITUDE
+                        </p>
+
+                        <h2>
+                            Dear <span id="teacherName">Teacher</span>,
+                        </h2>
+
+                        <p id="message">
+                            Thank you for your patience, guidance,
+                            kindness, and dedication. Your lessons go
+                            beyond the classroom and inspire us to keep
+                            learning, growing, and believing in ourselves.
+
+                            Your hard work and encouragement make a
+                            meaningful difference in the lives of your
+                            students.
+
+                            I am truly grateful for everything you do.
+                        </p>
+
+                        <p class="thanks">
+                            With sincere appreciation,
+                        </p>
+
+                        <div class="signature" id="studentName">
+                            Reward Bartolay
+                        </div>
+
+                        <div class="teacher-day">
+                            HAPPY TEACHERS' DAY ✦
+                        </div>
+
+                    </div>
+
+                    <div class="envelope-back"></div>
+
+                    <div class="flap"></div>
+
+                    <div class="front-left"></div>
+                    <div class="front-right"></div>
+                    <div class="front-bottom"></div>
+
+                    <button id="seal" class="seal">
+                        ✦
+                    </button>
+
+                </div>
+
+            </div>
+
+            <p class="instruction" id="instruction">
+                Click the seal to open your message.
+            </p>
+
+            <div class="buttons">
+
+                <button id="openButton" class="open-button">
+                    Open Message ↗
+                </button>
+
+                <button id="editButton" class="edit-button">
+                    Personalize
+                </button>
+
+            </div>
+
+        </section>
+
+        <!-- Personalization Panel -->
+        <section id="editor" class="editor hidden">
+
+            <h2>Personalize Your Card</h2>
+
+            <label>Teacher's Name</label>
+            <input
+                type="text"
+                id="teacherInput"
+                placeholder="Example: Ma'am Santos"
+            >
+
+            <label>Your Name</label>
+            <input
+                type="text"
+                id="studentInput"
+                value="Reward Bartolay"
+            >
+
+            <label>Your Message</label>
+            <textarea id="messageInput" rows="7">
+Thank you for your patience, guidance, kindness, and dedication. Your lessons go beyond the classroom and inspire us to keep learning, growing, and believing in ourselves.
+
+Your hard work and encouragement make a meaningful difference in the lives of your students.
+
+I am truly grateful for everything you do.
+            </textarea>
+
+            <div class="editor-buttons">
+
+                <button id="saveButton">
+                    Save Message ✓
+                </button>
+
+                <button id="cancelButton">
+                    Cancel
+                </button>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer>
+        MADE WITH RESPECT & GRATITUDE
+        <span>✦</span>
+        TEACHERS' DAY 2026
+    </footer>
+
+    <div id="particles"></div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

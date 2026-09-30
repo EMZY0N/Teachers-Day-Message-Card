@@ -1,0 +1,731 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --green: #173f35;
+    --dark-green: #0d2c25;
+    --cream: #f7f2e6;
+    --paper: #fffdf7;
+    --gold: #c9a86a;
+    --light-gold: #e8d4a9;
+    --text: #40534a;
+}
+
+body {
+    min-height: 100vh;
+    background: var(--cream);
+    color: var(--text);
+    font-family: Arial, Helvetica, sans-serif;
+    overflow-x: hidden;
+}
+
+/* Background */
+
+.circle {
+    position: fixed;
+    border-radius: 50%;
+    pointer-events: none;
+    opacity: .45;
+}
+
+.circle1 {
+    width: 350px;
+    height: 350px;
+    background: #e3e7d7;
+    left: -180px;
+    top: 20%;
+}
+
+.circle2 {
+    width: 400px;
+    height: 400px;
+    background: #eadfc8;
+    right: -220px;
+    bottom: -100px;
+}
+
+/* Header */
+
+header {
+    width: 90%;
+    max-width: 1100px;
+    margin: auto;
+    padding: 30px 0;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    border-bottom: 1px solid rgba(23,63,53,.15);
+}
+
+.logo {
+    color: var(--green);
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 4px;
+}
+
+.small-text {
+    font-size: 10px;
+    letter-spacing: 3px;
+    color: #77857d;
+}
+
+/* Main */
+
+main {
+    width: 90%;
+    max-width: 900px;
+    margin: auto;
+    text-align: center;
+    padding-top: 70px;
+}
+
+.subtitle {
+    color: #9b7b43;
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    margin-bottom: 20px;
+}
+
+h1 {
+    color: var(--green);
+    font-family: Georgia, serif;
+    font-size: clamp(45px, 8vw, 85px);
+    line-height: 1;
+    margin-bottom: 20px;
+}
+
+h1 span {
+    color: #b28d4d;
+    font-style: italic;
+}
+
+.intro {
+    max-width: 500px;
+    margin: auto;
+
+    color: #758279;
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+/* Card */
+
+.card {
+    margin: 50px auto 0;
+
+    width: 100%;
+    max-width: 650px;
+
+    min-height: 570px;
+
+    padding: 30px;
+
+    background: var(--green);
+
+    border: 1px solid var(--gold);
+    border-radius: 7px;
+
+    box-shadow:
+        0 30px 70px rgba(25,50,40,.2);
+
+    position: relative;
+    overflow: hidden;
+}
+
+.card::before {
+    content: "";
+
+    position: absolute;
+
+    width: 200px;
+    height: 200px;
+
+    border: 1px solid rgba(201,168,106,.2);
+
+    border-radius: 50%;
+
+    left: -100px;
+    top: -100px;
+}
+
+.card::after {
+    content: "";
+
+    position: absolute;
+
+    width: 200px;
+    height: 200px;
+
+    border: 1px solid rgba(201,168,106,.2);
+
+    border-radius: 50%;
+
+    right: -100px;
+    bottom: -100px;
+}
+
+/* Card title */
+
+.card-title {
+    color: #dfcca1;
+
+    font-size: 10px;
+    font-weight: bold;
+    letter-spacing: 4px;
+
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+
+    position: relative;
+    z-index: 5;
+}
+
+.card-title span {
+    color: var(--gold);
+}
+
+/* Envelope */
+
+.envelope-area {
+    height: 350px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    perspective: 1000px;
+}
+
+.envelope {
+    width: 360px;
+    height: 230px;
+
+    position: relative;
+
+    margin-top: 25px;
+
+    transform-style: preserve-3d;
+}
+
+/* Back */
+
+.envelope-back {
+    position: absolute;
+
+    width: 100%;
+    height: 100%;
+
+    background: #e5d2a9;
+
+    border-radius: 4px;
+
+    box-shadow:
+        0 15px 30px rgba(0,0,0,.2);
+}
+
+/* Letter */
+
+.letter {
+    position: absolute;
+
+    z-index: 2;
+
+    width: 90%;
+    height: 285px;
+
+    left: 5%;
+    bottom: 5px;
+
+    padding: 25px;
+
+    background: var(--paper);
+
+    text-align: left;
+
+    box-shadow:
+        0 5px 20px rgba(0,0,0,.15);
+
+    transition:
+        transform .8s cubic-bezier(.2,.8,.2,1);
+
+    transform: translateY(0);
+}
+
+.flower {
+    position: absolute;
+
+    right: 15px;
+    top: 10px;
+
+    color: var(--gold);
+
+    font-size: 25px;
+}
+
+.letter-small {
+    color: #9d7e47;
+
+    font-size: 8px;
+    font-weight: bold;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 10px;
+}
+
+.letter h2 {
+    color: var(--green);
+
+    font-family: Georgia, serif;
+
+    font-size: 23px;
+
+    margin-bottom: 12px;
+}
+
+.letter h2 span {
+    color: #a47e42;
+}
+
+.letter #message {
+    color: #65736b;
+
+    font-size: 11px;
+
+    line-height: 1.7;
+
+    white-space: pre-line;
+}
+
+.thanks {
+    color: #707d76;
+
+    font-size: 10px;
+
+    margin-top: 12px;
+}
+
+.signature {
+    color: var(--green);
+
+    font-family: Georgia, serif;
+
+    font-style: italic;
+
+    font-size: 19px;
+
+    margin-top: 3px;
+}
+
+.teacher-day {
+    color: #a07d45;
+
+    font-size: 7px;
+
+    font-weight: bold;
+
+    letter-spacing: 2px;
+
+    margin-top: 10px;
+}
+
+/* Envelope flap */
+
+.flap {
+    position: absolute;
+
+    z-index: 4;
+
+    top: 0;
+    left: 0;
+
+    width: 0;
+    height: 0;
+
+    border-left: 180px solid transparent;
+    border-right: 180px solid transparent;
+
+    border-top: 125px solid #d2bc91;
+
+    transform-origin: top;
+
+    transition:
+        transform .65s ease;
+
+}
+
+/* Front folds */
+
+.front-left {
+    position: absolute;
+
+    z-index: 3;
+
+    bottom: 0;
+    left: 0;
+
+    width: 0;
+    height: 0;
+
+    border-top: 115px solid transparent;
+    border-bottom: 115px solid #d7c197;
+    border-right: 180px solid transparent;
+}
+
+.front-right {
+    position: absolute;
+
+    z-index: 3;
+
+    bottom: 0;
+    right: 0;
+
+    width: 0;
+    height: 0;
+
+    border-top: 115px solid transparent;
+    border-bottom: 115px solid #c8b17f;
+    border-left: 180px solid transparent;
+}
+
+.front-bottom {
+    position: absolute;
+
+    z-index: 4;
+
+    bottom: 0;
+    left: 0;
+
+    width: 0;
+    height: 0;
+
+    border-left: 180px solid transparent;
+    border-right: 180px solid transparent;
+
+    border-bottom: 130px solid #e1cda5;
+}
+
+/* Seal */
+
+.seal {
+    position: absolute;
+
+    z-index: 10;
+
+    top: 52%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+
+    width: 58px;
+    height: 58px;
+
+    border-radius: 50%;
+
+    border: 2px solid #ead5a7;
+
+    background: #9d7840;
+
+    color: white;
+
+    font-size: 20px;
+
+    box-shadow:
+        0 5px 15px rgba(0,0,0,.2);
+
+    transition: .3s;
+}
+
+.seal:hover {
+    transform:
+        translate(-50%, -50%)
+        scale(1.1);
+
+    background: #b28c50;
+}
+
+/* Open animation */
+
+.envelope.open .flap {
+    transform: rotateX(180deg);
+}
+
+.envelope.open .letter {
+    transform: translateY(-145px);
+}
+
+.envelope.open .seal {
+    opacity: 0;
+    pointer-events: none;
+}
+
+/* Instructions */
+
+.instruction {
+    color: #bdcbbb;
+
+    font-size: 12px;
+
+    margin-top: -10px;
+}
+
+/* Buttons */
+
+.buttons {
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 25px;
+
+    margin-top: 20px;
+}
+
+.open-button {
+    border: none;
+
+    padding: 14px 20px;
+
+    background: var(--light-gold);
+
+    color: var(--dark-green);
+
+    font-weight: bold;
+
+    border-radius: 3px;
+
+    cursor: pointer;
+
+    transition: .25s;
+}
+
+.open-button:hover {
+    transform: translateY(-2px);
+
+    background: #f0dfba;
+}
+
+.edit-button {
+    border: none;
+
+    background: transparent;
+
+    color: #dcd1b8;
+
+    cursor: pointer;
+
+    font-size: 12px;
+}
+
+.edit-button:hover {
+    color: white;
+}
+
+/* Editor */
+
+.editor {
+    width: 100%;
+    max-width: 650px;
+
+    margin: 50px auto;
+
+    padding: 35px;
+
+    background: white;
+
+    border-radius: 6px;
+
+    box-shadow: 0 15px 40px rgba(0,0,0,.08);
+
+    text-align: left;
+}
+
+.editor h2 {
+    color: var(--green);
+
+    font-family: Georgia, serif;
+
+    margin-bottom: 25px;
+}
+
+.editor label {
+    display: block;
+
+    margin-top: 15px;
+    margin-bottom: 7px;
+
+    color: #40544b;
+
+    font-size: 12px;
+
+    font-weight: bold;
+}
+
+.editor input,
+.editor textarea {
+    width: 100%;
+
+    border: 1px solid #d8ded7;
+
+    border-radius: 3px;
+
+    padding: 12px;
+
+    outline: none;
+
+    font-family: Arial;
+
+    color: #30463c;
+}
+
+.editor textarea {
+    resize: vertical;
+    line-height: 1.6;
+}
+
+.editor input:focus,
+.editor textarea:focus {
+    border-color: #829d8b;
+}
+
+.editor-buttons {
+    display: flex;
+
+    gap: 10px;
+
+    margin-top: 20px;
+}
+
+#saveButton,
+#cancelButton {
+    border: none;
+
+    padding: 12px 18px;
+
+    border-radius: 3px;
+
+    cursor: pointer;
+
+    font-weight: bold;
+}
+
+#saveButton {
+    background: var(--green);
+    color: white;
+}
+
+#cancelButton {
+    background: #e7ebe6;
+    color: #53635a;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Footer */
+
+footer {
+    width: 90%;
+    max-width: 1100px;
+
+    margin: 50px auto 0;
+
+    padding: 25px 0;
+
+    border-top: 1px solid rgba(23,63,53,.15);
+
+    display: flex;
+
+    justify-content: space-between;
+
+    color: #7c8981;
+
+    font-size: 9px;
+
+    letter-spacing: 2px;
+}
+
+footer span {
+    color: var(--gold);
+}
+
+/* Celebration particles */
+
+.particle {
+    position: fixed;
+
+    top: -20px;
+
+    z-index: 100;
+
+    pointer-events: none;
+
+    animation: fall 3s linear forwards;
+}
+
+@keyframes fall {
+
+    from {
+        transform:
+            translateY(0)
+            rotate(0deg);
+    }
+
+    to {
+        transform:
+            translateY(110vh)
+            translateX(var(--move))
+            rotate(500deg);
+
+        opacity: 0;
+    }
+}
+
+/* Mobile */
+
+@media(max-width:600px) {
+
+    header {
+        padding: 20px 0;
+    }
+
+    .small-text {
+        display: none;
+    }
+
+    main {
+        padding-top: 50px;
+    }
+
+    .card {
+        padding: 25px 15px;
+    }
+
+    .envelope {
+        transform: scale(.85);
+    }
+
+    .envelope.open .letter {
+        transform: translateY(-125px);
+    }
+
+    .buttons {
+        flex-wrap: wrap;
+    }
+
+    footer {
+        font-size: 7px;
+    }
+
+}
